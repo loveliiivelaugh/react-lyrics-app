@@ -77,6 +77,9 @@ function App() {
         <button className="btn" onClick={() => getMoreSongs(songs.next)}>Next</button>
         : ""
       } */}
+      <div className="footer">
+        API details: <a href="https://lyricsovh.docs.apiary.io/#" target="blank">https://lyricsovh.docs.apiary.io/#</a>
+      </div>
     </div>
   );
 }
