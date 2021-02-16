@@ -1,8 +1,6 @@
 
 import { useState } from "react";
-import logo from './logo.svg';
 import './App.css';
-// import Fetch from "react-fetch";
 
 function App() {
   const [songs, setSongs] = useState(null);
@@ -44,7 +42,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <div className="form">
           <input type="text" id="search" placeholder="Find a song!" />
           <button className="search-btn" onClick={submit}>Search</button>

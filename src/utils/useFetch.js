@@ -4,18 +4,14 @@ export default function useFetchLyrics(url, key) {
     const [data, setData] = useState(null);
     useEffect(() => {
         async function loadData() {
-            const response = await fetch(url, {
-                headers: {
-                    'Guitarparty-Api-Key': key
-                }
-            });
+            const response = await fetch(url);
             if(!response.ok) {
                 // oups! something went wrong
                 return;
             }
     
             const posts = await response.json();
-            setData(posts.objects[0].body);
+            setData(posts);
         }
     
         loadData();
